@@ -12,7 +12,7 @@ http.createServer(function(req, res) {
 
     form.parse(req, function(err, fields, files) {
       console.log(fields.email);
-      var transporter = nodemailer.createTransport('smtps://nottna%40gmail.com:605412@smtp.gmail.com');
+      var transporter = nodemailer.createTransport('smtps://mail%40gmail.com:password@smtp.gmail.com');
       // setup e-mail data with unicode symbols
       var mailOptions = {
         from: '"Anton" <nottna@gmail.com>', // sender address

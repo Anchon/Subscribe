@@ -13,7 +13,7 @@ http.createServer(function(req, res) {
 
             var transporter = nodemailer.createTransport('smtps://login%40gmail.com:password@smtp.gmail.com');// setup e-mail data with unicode symbols
             var mailOptions = {
-                from: '"Anton" <nottna@gmail.com>', // sender address
+                from: '"Anton" <login@gmail.com>', // sender address
                 to: fields.email, // list of receivers
                 subject: 'Hello', // Subject line
                 text: 'Hello world', // plaintext body

@@ -5,7 +5,6 @@
     <link href="img/style.css" rel="stylesheet" type="text/css">
     <title>Subscribe us</title>
     <script>
-
         function check() {
             var r = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             var email = document.getElementById('mail').value;
@@ -17,13 +16,11 @@
             } else {
                 elem = document.getElementById('badmsg');
                 elem.style.display = "none";
-
                 var xhr = new XMLHttpRequest();
                 var body = 'email=' + encodeURIComponent(email);
                 xhr.open('POST', 'submit', true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.send(body);
-
                 var elem = document.getElementById('goodmsg');
                 elem.style.display = 'block';
             }

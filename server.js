@@ -10,9 +10,9 @@ http.createServer(function(req, res) {
         form.parse(req, function(err, fields) {
             console.log(fields.email);
 
-            var transporter = nodemailer.createTransport('smtps://account%40gmail.com:password@smtp.gmail.com');// setup e-mail data with unicode symbols
+            var transporter = nodemailer.createTransport('smtps://username%40gmail.com:password@smtp.gmail.com');// setup e-mail data with unicode symbols
             var mailOptions = {
-                from: '"Anton" <account@gmail.com>', // sender address
+                from: '"Anton" <username@gmail.com>', // sender address
                 to: fields.email, // list of receivers
                 subject: 'Hello', // Subject line
                 text: 'Hello world', // plaintext body

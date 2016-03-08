@@ -4,23 +4,21 @@ var nodemailer = require('nodemailer');
 var file = new static.Server('Static');
 var formidable = require('formidable');
 
-
 http.createServer(function(req, res) {
     if (req.url == '/submit' && req.method.toLowerCase() == 'post') {
         var form = new formidable.IncomingForm();
         form.parse(req, function(err, fields) {
             console.log(fields.email);
 
-            var transporter = nodemailer.createTransport('smtps://login%40gmail.com:password@smtp.gmail.com');// setup e-mail data with unicode symbols
+            var transporter = nodemailer.createTransport('smtps://account%40gmail.com:password@smtp.gmail.com');// setup e-mail data with unicode symbols
             var mailOptions = {
-                from: '"Anton" <login@gmail.com>', // sender address
+                from: '"Anton" <account@gmail.com>', // sender address
                 to: fields.email, // list of receivers
                 subject: 'Hello', // Subject line
                 text: 'Hello world', // plaintext body
                 html: '<b>Hello world</b>' // html body
             };
-
-// send mail with defined transport object
+            // send mail with defined transport object
             transporter.sendMail(mailOptions, function(error, info){
                 if(error){
                     return console.log(error);
